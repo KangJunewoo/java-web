@@ -32,4 +32,12 @@ ALTER USER 'connectuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'c
 ```
 
 해주면 JDBC에서도 잘 돌아갈 것이다.  
-[도움을 준 링크](https://seoulbliss.tistory.com/88)
+[도움을 받은 링크](https://seoulbliss.tistory.com/88)
+
+또한 뭔가 실행은 잘 되는데, 항상 다음과 같은 오류가 떴었다.
+```
+MESSAGE: closing inbound before receiving peer's close_notify
+```
+
+찾아보니 db url 뒤에 ?useSSL=false를 달아주면 된다고 나와있어서 그렇게 했더 잘 되었다.
+[도움을 받은 링크](https://kimmy100b.github.io/error/2020/10/02/jsp-error/)
