@@ -1,5 +1,10 @@
 package kr.or.connect.projecta.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import kr.or.connect.projecta.dto.Member;
+
 public class MemberDao {
 	private static String dbUrl = "jdbc:mysql://localhost:3306/connectdb?useSSL=false";
 	private static String dbUser = "connectuser";
