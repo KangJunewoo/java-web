@@ -1,6 +1,10 @@
 package kr.or.connect.projecta;
 
+import java.util.List;
 import java.util.Scanner;
+
+import kr.or.connect.projecta.dao.MemberDao;
+import kr.or.connect.projecta.dto.Member;
 
 public class App {
 	static Scanner scanner = new Scanner(System.in);
@@ -13,12 +17,24 @@ public class App {
 		System.out.print("회사 이름을 입력하세요 : ");
 		String company = scanner.next();
 		
-		System.out.println("modeCreateMember\n");
+		Member member = new Member(name, phone, company);
+		MemberDao dao = new MemberDao();
+		
+		int insertCount = dao.createMember(member);
+		
+		System.out.println(insertCount);
+		
 	}
 
 	private static void modeSearchMember() {
 		System.out.print("검색할 이름을 입력하세요 : ");
 		String name = scanner.next();
+		
+		MemberDao dao = new MemberDao();
+		List<Member> memberList = dao.searchMembers(name);
+		for(Member member:memberList) {
+			System.out.println(member);
+		}
 	}
 
 	public static void main(String[] args) {

@@ -6,6 +6,13 @@ public class Member {
 	private String phone;
 	private String company;
 
+	public Member(String name, String phone, String company) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.company = company;
+	}
+
 	public Integer getMemberIdx() {
 		return memberIdx;
 	}
