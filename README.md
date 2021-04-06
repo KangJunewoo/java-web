@@ -41,3 +41,22 @@ MESSAGE: closing inbound before receiving peer's close_notify
 
 찾아보니 db url 뒤에 ?useSSL=false를 달아주면 된다고 나와있어서 그렇게 했더 잘 되었다.
 [도움을 받은 링크](https://kimmy100b.github.io/error/2020/10/02/jsp-error/)
+
+## Servlet
+.java 파일인데 express의 라우터 같은 건가보다.  
+코드 보면 바로 이해 가능.
+
+## 서블릿 생명주기
+lifecycleservlet 생성 -> init 호출 -> service 호출이고, 새로고침 하면 앞에 두개 빼고 service만 호출됨.
+
+![생명주기](https://cphinf.pstatic.net/mooc/20180124_22/1516782982944xjogH_PNG/1_5_3_ServletLifcycle.PNG)
+
+1. WAS가 서블릿 요청을 받는다.
+2. 서블릿이 메모리에 있는지 확인한다. 메모리에 없다면, 메모리에 올리고 init()을 실행한다.
+4. service()를 실행한다.
+4. WAS가 종료되거나 웹앱이 새롭게 갱신될 경우 destroy()를 실행한다.
+
+
+
+
+
