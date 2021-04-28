@@ -85,3 +85,8 @@ IoC 컨테이너, 트랜잭션 관리, 모듈화 잘되어있고, MVC 프레임�
 * Data Access / Integration : 많은 부분들 중 spring-jdbc, spring-tx 사용 예정. 각각 DB접근, 트랜잭션 관리에 해당하겠지. 그 외에도 spring-orm, spring-oxm, spring-jms 등이 있다. 필요할 때 하나씩 익히면 된다.
 * 웹 : spring-web, spring-webmvc 다룰 예정. 그 외에도 spring-websocket, spring-webmvcportlet 등이 있다.
 
+
+### 환경세팅
+* 똑같이 maven-archetype-webapp으로 프로젝트 열고 pom.xml에 servlet, spring 설정 추가해
+* src/main에 java 폴더 만들고 그 안에kr.or.connect.mvcexam.config 패키지 만든담에 WebMvcContextConfiguration.java 설정파일 만
+  * 이에 대한 자세한 설명은.. 해당 커밋을 참조하자.
